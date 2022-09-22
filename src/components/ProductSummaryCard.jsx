@@ -3,7 +3,6 @@ import {incrementProductAmount, decrementProductAmount } from "../stores/cart/ca
 
 export const ProductsSummaryCard = ({ product }) => {
     const dispatch = useDispatch();
-    
 
     return (
         <div className="flex p-1 sm:p-2 border-b border-b-gray-200">

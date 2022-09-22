@@ -1,6 +1,6 @@
 import aboutImage from "../assets/images/about-image.png";
 
-function About() {
+export const About = () => {
 
     return (
         <div className="bg-white">
@@ -18,11 +18,9 @@ function About() {
                     </p>
                 </div>
                 <div className="flex items-center justify-center">
-                    <img src={aboutImage} alt="about" className="w-[400px] h-[400px] object-cover" />
+                    <img src={aboutImage} alt="" className="w-[400px] h-[400px] object-cover" />
                 </div>
             </div>
         </div>
     )
 }
-
-export default About;

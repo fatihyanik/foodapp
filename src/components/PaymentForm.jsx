@@ -35,7 +35,7 @@ const PaymentForm = () => {
 
         setLoading(true);
         try {
-            const { error: backendError, clientSecret } = await fetch('http://localhost:8080/create-payment-intent', {
+            const { error: backeEndError, clientSecret } = await fetch('http://localhost:8080/create-payment-intent', {
                 method: 'POST',
                 headers: {
                     'Content-type': 'application/json'
@@ -55,8 +55,8 @@ const PaymentForm = () => {
                     }
                 }
             )
-            if (backendError || stripeError) {
-                setError(backendError || stripeError)
+            if (backeEndError || stripeError) {
+                setError(backeEndError || stripeError)
             } else if (paymentIntent.status === 'succeeded') {
                 dispatch(clearAddress());
                 dispatch(clearCart());
@@ -77,7 +77,7 @@ const PaymentForm = () => {
                 <CardElement id="card-element" />
             </div>
             <div className="flex justify-center p-2">
-                <Button type="submit" disbled={loading}>
+                <Button type="submit" disabled={loading}>
                     {
                         loading ?
                         'Loading...' :
